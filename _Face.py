@@ -5,8 +5,7 @@ import numpy as np
 
 video_capture = cv2.VideoCapture(0)
 
-tal_image = face_recognition.load_image_file("tal.png")
-obama_face_encoding = face_recognition.face_encodings(tal_image)[0]
+
 
 biden_image = face_recognition.load_image_file("biden.jpg")
 biden_face_encoding = face_recognition.face_encodings(biden_image)[0]
@@ -14,53 +13,21 @@ biden_face_encoding = face_recognition.face_encodings(biden_image)[0]
 shelby_image = face_recognition.load_image_file("shelby.jpg")
 shelby_face_encoding = face_recognition.face_encodings(shelby_image)[0]
 
-james_image = face_recognition.load_image_file("james.jpg")
-james_face_encoding = face_recognition.face_encodings(james_image)[0]
 
-pinhas_image = face_recognition.load_image_file("pinhas.jpg")
-pinhas_face_encoding = face_recognition.face_encodings(pinhas_image)[0]
-
-jerem_image = face_recognition.load_image_file("Jerem.jpg")
-jerem_face_encoding = face_recognition.face_encodings(jerem_image)[0]
-
-wileme_image = face_recognition.load_image_file("Wilem.jpg")
-wileme_image_encoding = face_recognition.face_encodings(wileme_image)[0]
-
-mika_image = face_recognition.load_image_file("mika.jpg")
-mika_image_encoding = face_recognition.face_encodings(mika_image)[0]
-
-ben_image = face_recognition.load_image_file("Ben.jpeg")
-ben_image_encoding = face_recognition.face_encodings(ben_image)[0]
-
-chuchu_image = face_recognition.load_image_file("Chuchu.jpeg")
-chuchu_image_encoding = face_recognition.face_encodings(chuchu_image)[0]
 
 
 known_face_encodings = [
-    obama_face_encoding,
+
     biden_face_encoding,
     shelby_face_encoding,
-    james_face_encoding,
-    pinhas_face_encoding,
-    jerem_face_encoding,
-    wileme_image_encoding,
-    mika_image_encoding,
-    ben_image_encoding,
-    chuchu_image_encoding
+
 
 
 ]
 known_face_names = [
     "Tal",
     "Joe Biden",
-    "Thomas Shelby",
-    "James",
-    "Pinhas",
-    "Jeremy",
-    "Wileme",
-    "Mika",
-    "Ben",
-    "Chuchu"
+
 ]
 
 # Initialisation des variables
