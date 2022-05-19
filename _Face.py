@@ -13,6 +13,12 @@ biden_face_encoding = face_recognition.face_encodings(biden_image)[0]
 shelby_image = face_recognition.load_image_file("shelby.jpg")
 shelby_face_encoding = face_recognition.face_encodings(shelby_image)[0]
 
+ruth_image = face_recognition.load_image_file("Ruth.jpeg")
+ruth_face_encoding = face_recognition.face_encodings(ruth_image)[0]
+
+
+
+
 
 
 
@@ -20,6 +26,9 @@ known_face_encodings = [
 
     biden_face_encoding,
     shelby_face_encoding,
+    ruth_face_encoding,
+
+
 
 
 
@@ -27,6 +36,8 @@ known_face_encodings = [
 known_face_names = [
     "Tal",
     "Joe Biden",
+    "RBG",
+
 
 ]
 
