@@ -7,7 +7,7 @@ video_capture = cv2.VideoCapture(0)
 
 
 
-biden_image = face_recognition.load_image_file("biden.jpg")
+biden_image = face_recognition.load_image_file("Tal.jpeg")
 biden_face_encoding = face_recognition.face_encodings(biden_image)[0]
 
 shelby_image = face_recognition.load_image_file("shelby.jpg")
@@ -28,6 +28,14 @@ known_face_encodings = [
     shelby_face_encoding,
     ruth_face_encoding,
 
+face_recognition.face_encodings(face_recognition.load_image_file("mika.jpg"))[0],
+face_recognition.face_encodings(face_recognition.load_image_file("raph.jpg"))[0],
+face_recognition.face_encodings(face_recognition.load_image_file("yariv.jpg"))[0],
+face_recognition.face_encodings(face_recognition.load_image_file("sahnip.jpg"))[0],
+face_recognition.face_encodings(face_recognition.load_image_file("Hyon.jpeg"))[0],
+face_recognition.face_encodings(face_recognition.load_image_file("Francois.png"))[0],
+face_recognition.face_encodings(face_recognition.load_image_file("dar.jpeg"))[0],
+
 
 
 
@@ -35,8 +43,16 @@ known_face_encodings = [
 ]
 known_face_names = [
     "Tal",
-    "Joe Biden",
+    "Thomas Shelby",
     "RBG",
+    "Mika",
+    "Raph",
+    "Yariv",
+    "Sahnip",
+    "Emmanuel Hyon",
+    "Francois Delbot",
+    "Petit con"
+
 
 
 ]
@@ -94,10 +110,11 @@ while True:
         left *= 4
 
         # Draw a box around the face
-        cv2.rectangle(frame, (left, top), (right, bottom), (0, 0, 255), 2)
+        from random import randint
+        cv2.rectangle(frame, (left, top), (right, bottom), (randint(0, 255), randint(0, 255), randint(0, 255)), 2)
 
         # Draw a label with a name below the face
-        cv2.rectangle(frame, (left, bottom - 35), (right, bottom), (0, 0, 255), cv2.FILLED)
+        cv2.rectangle(frame, (left, bottom - 35), (right, bottom), (randint(0, 255),randint(0, 255),randint(0, 255)), cv2.FILLED)
         font = cv2.FONT_HERSHEY_DUPLEX
         cv2.putText(frame, name, (left + 6, bottom - 6), font, 1.0, (255, 255, 255), 1)
 
